@@ -64,10 +64,22 @@
         <v-btn dark to="/drive/upload" small   class="text-caption font-weight-bold" rounded color="black">Upload New File</v-btn>
       </v-row>
       
-     <v-row class="mt-2" no-gutters>
+      <v-row class="" no-gutters align="center" justify="center">
+       <v-col cols="12" xl="4" lg="4">
+        <v-icon  @click="move" size="200">mdi-folder</v-icon>
+       </v-col>
+       <v-col cols="12" xl="4" lg="4">
+         <v-icon @click="move" size="200">mdi-folder</v-icon>
+       </v-col>
+       <v-col cols="12" xl="4" lg="4">
+         <v-icon @click="move" size="200">mdi-folder</v-icon>
+       </v-col>
+      </v-row>
+     
+     <v-row class="mt-2" v-if="bucket!==''" no-gutters>
         <p style="font-weight:bold;font-size:12px">New Files</p>
         <v-spacer></v-spacer>
-        <v-btn small rounded color="grey" outlined style="text-transform:none">View More</v-btn>
+        <v-btn small rounded color="grey" :to="{path:`/drive/bucket/${bucket}`}" outlined style="text-transform:none">View More</v-btn>
      </v-row>
      
       <v-row align="center" justify="center" style="height:40vh"   v-if="$store.state.Buckets.length==0">
@@ -144,6 +156,9 @@ methods:{
     this.$store.commit("createBucket",this.bucketname)
     
     // this.dialog=false
+  },
+  move(){
+    alert('move ')
   }
 },
 mounted(){

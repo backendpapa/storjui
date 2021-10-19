@@ -66,6 +66,9 @@ export default new Vuex.Store({
     },
     setDialog(state,val){
       state.dialog=val
+    },
+    clearObject(state){
+      state.Objects=[]
     }
   },
   actions: {

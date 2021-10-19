@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Drive from '../views/Drive.vue'
 import Upload from '../views/Upload.vue'
+import Bucket from '../views/Bucket.vue'
 import store from '../store/index'
 Vue.use(VueRouter)
  
@@ -17,6 +18,11 @@ const routes = [
     name: 'Drive',
     component: Drive,
    
+  },
+  {
+    path: '/drive/bucket/:bucket',
+    name: 'Bucket',
+    component: Bucket,
   },
   {
     path: '/drive/upload',
