@@ -53,7 +53,7 @@
     <!-- Home page body -->
 <div style="height:100vh;position:relative">
   <div style="height:100vh;background-color:#4075F5;width:100%">
-    <div style="height:100%;width:40%;background-color:#3C6FE5"></div>
+    <div style="height:100%;width:50%;background-color:#3C6FE5"></div>
   </div>
  
     <v-container>
@@ -62,7 +62,7 @@
         <div style="height:100%;width:100%" class="animate__animated animate__fadeInDown">
         <p class="text-h1 font-weight-bold white--text  ">S3 Bucket Closer Than Ever</p>
         
-        <v-btn rounded color="white" style="text-transform:none" class="text-body-2 blue--text animate__animated animate__fadeIn animate__slow animate__delay-1s" x-large>Access S3 bucket <v-icon class="ml-4">mdi-chevron-right</v-icon></v-btn>
+        <v-btn rounded @click="drawer=!drawer" color="white" style="text-transform:none" class="text-body-2 blue--text animate__animated animate__fadeIn animate__slow animate__delay-1s" x-large>Access S3 bucket <v-icon class="ml-4">mdi-chevron-right</v-icon></v-btn>
       </div> 
       </v-col>
       <v-col cols="12" xl="5" lg="5"></v-col>
