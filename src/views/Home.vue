@@ -70,7 +70,7 @@
       
     </v-container>
     <v-container >
-      <v-row no-gutters style="position:absolute;bottom:-15%;width:100vw">
+      <v-row no-gutters style="position:absolute;bottom:-15%;width:100%">
     
   <carousel  :nav="false" :autoPlay="true"   autoWidth  items="6" style="height:50vh;width:100%">
 
