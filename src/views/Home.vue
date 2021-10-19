@@ -13,7 +13,7 @@
       
       <v-spacer></v-spacer>
       <v-btn outlined color="white" rounded dark @click="drawer=!drawer" class="mr-4  d-none d-sm-flex" style="text-transform:none" plain> Login</v-btn>
-      <v-app-bar-nav-icon class="white--text mt-n4" ></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon class="white--text mt-n4  d-flex d-sm-none" ></v-app-bar-nav-icon>
         </v-row>
       </v-container>
     </v-app-bar>
@@ -51,8 +51,8 @@
 
 
     <!-- Home page body -->
-<div style="height:100vh;position:relative">
-  <div style="height:100vh;background-color:#4075F5;width:100%" class="img">
+<div style="height:140vh;position:relative">
+  <div style="height:140vh;background-color:#4075F5;width:100%" class="img">
     <div style="height:100%;width:50%;background-color:#3C6FE5"></div>
   </div>
  
@@ -67,14 +67,30 @@
       </v-col>
       <v-col cols="12" xl="5" lg="5"></v-col>
 </v-row>
+      
     </v-container>
+    <v-container >
+      <v-row no-gutters style="position:absolute;bottom:-15%;width:100vw">
+    
+  <carousel  :nav="false" :autoPlay="true"   autoWidth  items="6" style="height:50vh;width:100%">
+
+       <div style="width:200px" v-for="i in items" :key="i">
+         <p class="text-body-2 font-weight-bold white--text">{{i.id}}</p>
+          <p style="font-size:18px" class=" white--text ">{{i.title}}</p>   
+          
+       </div>
+</carousel>
+
+
+       
+      </v-row>
+    </v-container>
+    
 
 </div>
 
 <!-- aim -->
-<v-row no-gutters>
 
-</v-row>
 
 
   </div>
@@ -83,11 +99,12 @@
 <script>
 
 import axios from 'axios'
+import carousel from 'vue-owl-carousel'
   export default {
     name: 'Home',
 
     components: {
-      
+      carousel
     },
     data(){
       return {
@@ -96,7 +113,15 @@ import axios from 'axios'
         secret:"",
         endpoint:"",
         region:"",
-        loading:false
+        loading:false,
+        items:[
+          {id:"01",title:"Introducing"},
+          {id:"02",title:"S3"},
+          {id:"03",title:"Quick"},
+          {id:"04",title:"Bucket"},
+          {id:"05",title:"Storage"},
+          {id:"06",title:"Access"}
+        ]
       }
     },
     methods:{
