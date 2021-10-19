@@ -129,8 +129,5 @@ import axios from 'axios'
   }
 </script>
 <style>
-.img{
-  background: url('../assets/stor.jpg');
-  background-size: cover;
-}
+
 </style>
