@@ -52,7 +52,7 @@
 
     <!-- Home page body -->
 <div style="height:100vh;position:relative">
-  <div style="height:100vh;background-color:#4075F5;width:100%">
+  <div style="height:100vh;background-color:#4075F5;width:100%" class="img">
     <div style="height:100%;width:50%;background-color:#3C6FE5"></div>
   </div>
  
@@ -70,6 +70,11 @@
     </v-container>
 
 </div>
+
+<!-- aim -->
+<v-row no-gutters>
+
+</v-row>
 
 
   </div>
@@ -123,3 +128,9 @@ import axios from 'axios'
     }
   }
 </script>
+<style>
+.img{
+  background: url('../assets/stor.jpg');
+  background-size: cover;
+}
+</style>
